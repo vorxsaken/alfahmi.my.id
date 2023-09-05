@@ -1,7 +1,4 @@
-import Navigation from "@/components/Navigation"
-import Transition from "@/animations/Transition"
 import { useIsomorphic } from "@/lib/useIsomorphic";
-import { Bungee_Shade } from 'next/font/google';
 import AnimateWordUpIn from "@/animations/AnimateWordUpIn";
 import { useTransitionReducer } from "@/contexts/Reducer";
 import Gallerys from "@/components/Gallerys";
@@ -10,7 +7,6 @@ import {Projects} from '@/lib/types'
 import Lottie from 'lottie-react';
 import Scroll from '../assets/scroll.json';
 import Layout from "@/components/Layout";
-const Inria = Bungee_Shade({ weight: "400", subsets: ["latin"], preload: true, fallback: ['bungee-shade'] });
 
 function Projects({allProjects}: {allProjects: Projects}) {
 

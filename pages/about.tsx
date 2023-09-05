@@ -1,12 +1,8 @@
-import Transition from "@/animations/Transition"
-import { Inria_Serif } from 'next/font/google'
 import Image from "next/image"
 import Clover from '../assets/clover.png'
-import Navigation from "@/components/Navigation"
 import AnimateUpIn from "@/animations/AnimateUpIn"
 import AnimateWordUpIn from "@/animations/AnimateWordUpIn"
 import Layout from "@/components/Layout"
-const Inria = Inria_Serif({ weight: "300", subsets: ["latin"] });
 
 function About() {
     return (
