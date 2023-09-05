@@ -10,7 +10,7 @@ import {Projects} from '@/lib/types'
 import Lottie from 'lottie-react';
 import Scroll from '../assets/scroll.json';
 import Layout from "@/components/Layout";
-const Inria = Bungee_Shade({ weight: "400", subsets: ["latin"] });
+const Inria = Bungee_Shade({ weight: "400", subsets: ["latin"], preload: true });
 
 function Projects({allProjects}: {allProjects: Projects}) {
 

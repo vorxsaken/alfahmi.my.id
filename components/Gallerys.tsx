@@ -9,7 +9,7 @@ import Observer from "gsap/dist/Observer";
 import { Projects } from "@/lib/types";
 import {Coiny} from 'next/font/google'
 
-const font = Coiny({weight: '400', subsets: ["latin"]});
+const font = Coiny({weight: '400', subsets: ["latin"], preload: true});
 
 export default function Gallerys({ projects }: { projects: Projects }) {
 
