@@ -7,9 +7,9 @@ import { useIsomorphic } from "@/lib/useIsomorphic";
 import gsap from 'gsap'
 import Observer from "gsap/dist/Observer";
 import { Projects } from "@/lib/types";
-import localFont from 'next/font/local'
+import {Coiny} from 'next/font/google'
 
-const font = localFont({src: '../styles/fonts/Coiny-Regular.ttf'});
+const font = Coiny({weight: '400', subsets: ["latin"]});
 
 export default function Gallerys({ projects }: { projects: Projects }) {
 
