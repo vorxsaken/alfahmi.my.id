@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation"
 import Transition from "@/animations/Transition"
 import { useIsomorphic } from "@/lib/useIsomorphic";
-import { Bungee_Shade } from 'next/font/google';
+import localFont from 'next/font/local';
 import AnimateWordUpIn from "@/animations/AnimateWordUpIn";
 import { useTransitionReducer } from "@/contexts/Reducer";
 import Gallerys from "@/components/Gallerys";
@@ -10,7 +10,7 @@ import {Projects} from '@/lib/types'
 import Lottie from 'lottie-react';
 import Scroll from '../assets/scroll.json';
 import Layout from "@/components/Layout";
-const Inria = Bungee_Shade({ weight: "400", subsets: ["latin"] });
+const font = localFont({src: '../styles/fonts/BungeeShade-Regular.ttf'});
 
 function Projects({allProjects}: {allProjects: Projects}) {
 
@@ -27,7 +27,7 @@ function Projects({allProjects}: {allProjects: Projects}) {
     <Layout title="Projects" className="overflow-y-hidden">
       <div className="w-full h-screen flex justify-center items-center fixed">
         <div className={`md:w-3/5 h-2/3 flex flex-col justify-start items-start text-5xl md:text-8xl text-amber-900 gap-4 
-          opacity-20 fixed pr-0 pl-0 ${Inria.className}`}
+          opacity-20 fixed pr-0 pl-0 ${font.className}`}
         >
           <AnimateWordUpIn delay={0.8} duration={0.5} className="w-full h-1/2 flex justify-start items-end overflow-hidden">
             PROJECTS /
