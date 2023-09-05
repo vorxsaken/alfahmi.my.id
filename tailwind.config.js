@@ -17,6 +17,11 @@ module.exports = {
         'bright-second': '#F1D4E5',
         'bright-third': '#73BBC9'
       },
+      fontFamily: {
+        'bungee-shade': ['Bungee Shade'],
+        'coiny': ['Coiny'],
+        'inria-serif': ['Inria Serif']
+      }
     },
   },
   plugins: [],

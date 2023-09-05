@@ -31,7 +31,7 @@ function About() {
                         }
                     </div>
                     <div className="w-full h-full mt-[30%] md:mt-0 flex flex-col justify-start items-start gap-20 md:gap-6 z-50">
-                        <div className={`w-full h-[10%] hidden md:flex justify-end items-end text-[#4A4A4A] relative ${Inria.className}`}>
+                        <div className={`w-full h-[10%] hidden md:flex justify-end items-end text-[#4A4A4A] relative font-inria-serif`}>
                             <AnimateUpIn
                                 duration={1}
                                 delay={0.9}
@@ -44,7 +44,7 @@ function About() {
                                 </p>
                             </AnimateUpIn>
                         </div>
-                        <div className={`w-full h-[10%] flex justify-start items-end text-[#4A4A4A] ${Inria.className}`}>
+                        <div className={`w-full h-[10%] flex justify-start items-end text-[#4A4A4A] font-inria-serif`}>
                             <div className="w-[400px] h-36 flex flex-col justify-start items-start gap-5 text-xs ml-0 md:ml-8">
                                 <AnimateUpIn
                                     className="opacity-0"
@@ -101,7 +101,7 @@ function About() {
                                 </AnimateWordUpIn>
                             </div>
                         </div>
-                        <div className={`w-full h-auto md:h-[30%] flex md:justify-center justify-start items-center text-[#4A4A4A] ${Inria.className}`}>
+                        <div className={`w-full h-auto md:h-[30%] flex md:justify-center justify-start items-center text-[#4A4A4A] font-inria-serif`}>
                             <AnimateUpIn
                                 duration={1}
                                 delay={0.9}

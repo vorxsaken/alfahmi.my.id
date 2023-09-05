@@ -167,7 +167,7 @@ export default function Gallerys({ projects }: { projects: Projects }) {
         <div id="projectsContainer" onMouseMove={(e) => mouseMove(e)} className="w-full h-screen flex justify-center items-center overflow-hidden relative">
             {
                 projects.map((project) => (
-                    <div key={project.slug} id="galleryContainer" className={`w-full h-[600px] flex justify-center items-center absolute opacity-0 md:top-[9%] select-none ${font.className}`}>
+                    <div key={project.slug} id="galleryContainer" className={`w-full h-[600px] flex justify-center items-center absolute opacity-0 md:top-[9%] select-none font-coiny`}>
                         <span id="galleryTitleOutside" className="absolute -z-10 text-center flex justify-center items-center rounded-sm font-extrabold md:text-5xl 
                         text-3xl top-14 md:top-16 py-4 px-2"
                         >

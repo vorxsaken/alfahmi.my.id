@@ -27,7 +27,7 @@ function Projects({allProjects}: {allProjects: Projects}) {
     <Layout title="Projects" className="overflow-y-hidden">
       <div className="w-full h-screen flex justify-center items-center fixed">
         <div className={`md:w-3/5 h-2/3 flex flex-col justify-start items-start text-5xl md:text-8xl text-amber-900 gap-4 
-          opacity-20 fixed pr-0 pl-0 ${Inria.className}`}
+          opacity-20 fixed pr-0 pl-0 font-bungee-shade`}
         >
           <AnimateWordUpIn delay={0.8} duration={0.5} className="w-full h-1/2 flex justify-start items-end overflow-hidden">
             PROJECTS /
