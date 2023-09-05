@@ -12,7 +12,7 @@ import Scroll from '../assets/scroll.json';
 import Layout from "@/components/Layout";
 const Inria = Bungee_Shade({ weight: "400", subsets: ["latin"] });
 
-function projects({allProjects}: {allProjects: Projects}) {
+function Projects({allProjects}: {allProjects: Projects}) {
 
   const [data, dispatch] = useTransitionReducer();
 
@@ -45,7 +45,7 @@ function projects({allProjects}: {allProjects: Projects}) {
   )
 }
 
-export default projects
+export default Projects
 
 export const getStaticProps = async () => {
   const allProjects = getAllPosts([

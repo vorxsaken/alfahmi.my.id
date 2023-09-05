@@ -107,8 +107,8 @@ function TitleAlbum() {
         <div className="w-1/2 flex flex-col justify-center items-center gap-1 text-[10rem] font-bold scale-75">
           <div id="firstCont" className="w-full h-40 flex justify-start items-start gap-1 overflow-hidden">
             {
-              firstWordArray.map(word => (
-                <span id="firstWords" className="text-transparent bg-clip-text bg-gradient-to-bl from-purple-400 via-pink-300 mt-24">
+              firstWordArray.map((word, index) => (
+                <span key={index} id="firstWords" className="text-transparent bg-clip-text bg-gradient-to-bl from-purple-400 via-pink-300 mt-24">
                   {word.toUpperCase()}
                 </span>
               ))
@@ -116,8 +116,8 @@ function TitleAlbum() {
           </div>
           <div id="secondCont" className="w-full h-40 flex justify-start items-start gap-1 overflow-hidden text-transparent bg-clip-text bg-gradient-to-bl from-red-600 via-red-200 to-yellow-400">
             {
-              secondWordArray.map(word => (
-                <span id="secondWords" className="mt-24">
+              secondWordArray.map((word, index) => (
+                <span key={index} id="secondWords" className="mt-24">
                   {word.toUpperCase()}
                 </span>
               ))
