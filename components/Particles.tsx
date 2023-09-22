@@ -7,7 +7,7 @@ function Particles({isSmall}: {isSmall: boolean}) {
     
     const position: any = {
         0: {
-            top: isSmall ? '18%' : '28%',
+            top: isSmall ? '13%' : '28%',
             left: isSmall ? '7%' : '10px'
         },
         1: {
@@ -82,7 +82,7 @@ function Particles({isSmall}: {isSmall: boolean}) {
     }, [])
 
     return (
-        <div className='w-full h-full flex justify-center items-center opacity-40 absolute -top-[4%] md:top-0 overflow-hidden ' onMouseMove={mouseMove}>
+        <div className='w-full h-full flex justify-center items-center opacity-40 absolute -top-[2%] md:top-0 overflow-hidden ' onMouseMove={mouseMove}>
             <div id='circles' className='w-full h-full md:w-[800px] md:h-[500px] relative ml-0 md:ml-20'>
                 <div id='circle' className='w-12 h-12 rounded-full bg-red-500 absolute' style={{ top: position[0].top, left: position[0].left }}></div>
                 <div id='circle' className='w-6 h-6 rounded-full bg-yellow-500 absolute' style={{ top: position[1].top, left: position[1].left }}></div>

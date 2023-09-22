@@ -32,7 +32,8 @@ export default function ProjectBody({ content, landscape, portrait, slug }: Proj
     }, [])
 
     return (
-        <div className={`w-full min-h-screen flex flex-col justify-start items-start text-slate-900 font-light gap-4 md:gap-8 px-6 pb-20 ${InriaLight.className}`}>
+        <div className={`w-full min-h-screen flex flex-col justify-start items-start text-slate-900 font-light gap-4 md:gap-8 
+        px-6 pb-20 -mt-20 md:mt-0 ${InriaLight.className}`}>
             <div dangerouslySetInnerHTML={{ __html: content }} className={`${ProjectStyles['markdown']}`}>
             </div>
             {

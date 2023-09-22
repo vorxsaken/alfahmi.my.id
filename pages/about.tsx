@@ -26,7 +26,7 @@ function About() {
                             ))
                         }
                     </div>
-                    <div className="w-full h-full mt-[30%] md:mt-0 flex flex-col justify-start items-start gap-20 md:gap-6 z-50">
+                    <div className="w-full h-full mt-[50%] md:mt-0 flex flex-col justify-start items-start gap-20 md:gap-6 z-50">
                         <div className={`w-full h-[10%] hidden md:flex justify-end items-end text-[#4A4A4A] relative font-inria-serif`}>
                             <AnimateUpIn
                                 duration={1}

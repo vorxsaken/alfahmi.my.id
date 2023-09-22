@@ -36,7 +36,7 @@ function Project({ project }: { project: Project }) {
                 )
             }
             <TransitionOut />
-            <div className="w-full flex flex-col justify-center items-center gap-4 md:gap-8 relative">
+            <div className="w-full flex flex-col justify-center items-center gap-0 md:gap-8 relative">
                 <Navigation />
                 <div className="w-full h-screen flex justify-center items-center absolute top-0">
                     <div className={`w-5/6 md:w-1/2 h-2/3 flex flex-col justify-start items-start text-5xl md:text-8xl font-extrabold text-amber-900 gap-4 

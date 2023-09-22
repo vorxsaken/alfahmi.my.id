@@ -33,7 +33,7 @@ function Projects({allProjects}: {allProjects: Projects}) {
           </AnimateWordUpIn>
         </div>
       </div>
-      <div className="w-full h-[20%] md:w-20 md:h-screen fixed flex flex-col justify-center items-center top-0 md:top-0 md:right-0 overflow-hidden">
+      <div className="w-full h-[20%] md:w-20 md:h-screen fixed hidden md:flex flex-col justify-center items-center top-0 md:top-0 md:right-0 overflow-hidden">
         <Lottie animationData={Scroll} className='w-full scale-[40%] md:scale-[250%]' />
       </div>
       <Gallerys projects={allProjects} />

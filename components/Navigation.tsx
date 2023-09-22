@@ -4,7 +4,7 @@ import { useIsomorphic } from '@/lib/useIsomorphic';
 import Router from 'next/router';
 
 function Navigation() {
-    
+
     const movePile = (e: any, initialVisit?: boolean, path?: string) => {
         const parentLeft = document.getElementById('parentPile')?.getBoundingClientRect().left as any;
         const buttonLeft = (initialVisit ? e : e.currentTarget).getBoundingClientRect().left;
@@ -18,9 +18,9 @@ function Navigation() {
         (initialVisit ? e : e.currentTarget).childNodes[0].classList.add('opacity-0');
         (initialVisit ? e : e.currentTarget).childNodes[1].classList.remove('opacity-0');
 
-        if(initialVisit) {
+        if (initialVisit) {
             gsap.set('#pile', {
-                x:(buttonLeft - parentLeft) -17
+                x: (buttonLeft - parentLeft) - 17
             })
         } else {
             gsap.to('#pile', {
@@ -30,8 +30,8 @@ function Navigation() {
             })
         }
 
-        if(!initialVisit) {
-            Router.push(path || '/')
+        if (!initialVisit) {
+            Router.push(path || '/', path || '/', { scroll: false })
         }
     }
 
@@ -40,7 +40,7 @@ function Navigation() {
 
         switch (Router.pathname) {
             case '/':
-                movePile(buttonPile[0], true)    
+                movePile(buttonPile[0], true)
                 break;
             case '/projects':
                 movePile(buttonPile[1], true)
@@ -55,9 +55,9 @@ function Navigation() {
 
     }, [])
     return (
-        <div className="w-full h-12 flex justify-center items-center fixed bottom-7 md:absolute md:top-7 z-30 select-none">
-            <div id='parentPile' className='h-full flex justify-center items-center rounded-full text-color bg-[#fbfbff] shadow-inner drop-shadow-lg relative cursor-pointer
-            text-sm font-semibold text-slate-400 px-4'>
+        <div className="w-full h-12 flex justify-center items-center fixed top-0 md:absolute md:top-7 z-30 select-none">
+            <div id='parentPile' className='w-full md:w-auto h-full flex justify-center items-center rounded-none md:rounded-full text-color bg-[#fbfbff] bg-opacity-40 backdrop-blur-md md:bg-opacity-100 md:backdrop-blur-none shadow-inner drop-shadow-none md:drop-shadow-lg relative cursor-pointer
+            text-sm font-semibold text-[#FF52A2] md:text-slate-400 px-4'>
                 <div id='pile' className='absolute w-24 h-8 bg-white drop-shadow-md rounded-3xl -z-10 left-4 shadow-inner'>
                 </div>
                 <div id='buttonPile' onClick={(e) => movePile(e, false, '/')} className='w-24 h-full py-4 px-5 flex justify-center items-center relative'>

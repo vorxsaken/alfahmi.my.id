@@ -100,7 +100,7 @@ export default function ProjectHead({ title, date, coverImage, excerpt }: Projec
                 </span>
                 <div id="gallery" className={`w-72 h-96 md:w-[500px] md:h-96 relative flex justify-center items-start rounded-md`}>
                     <Image id="galleryImage" fill src={coverImage} alt='image' className="object-cover md:object-cover" style={{ objectPosition: '50% 60%' }} />
-                    <span id="galleryTitleInside" className="w-[400px] absolute z-20 text-center flex justify-center items-center rounded-sm font-extrabold md:text-5xl 
+                    <span id="galleryTitleInside" className="absolute z-20 text-center flex justify-center items-center rounded-sm font-extrabold md:text-5xl 
                             text-3xl -top-[12rem] md:-top-[11.5%] py-4 px-2 uppercase"
                     >
                         <span className="text-red-700">
@@ -108,12 +108,12 @@ export default function ProjectHead({ title, date, coverImage, excerpt }: Projec
                         </span>
                     </span>
                     <div id="projectDescContainer" className="w-full h-full bg-gradient-to-b from-transparent to-bright absolute opacity-0 flex justify-end
-                            items-start flex-col gap-20 md:gap-20 px-12 backdrop-blur-sm pb-10 -bottom-1"
+                            items-start flex-col gap-20 md:gap-20 px-6 md:px-12 backdrop-blur-sm pb-10 -bottom-1"
                     >
                         <AnimateWordUpIn
                             delay={0.5}
                             duration={1.5}
-                            className=" md:h-20 flex justify-start md:justify-end items-start gap-1 md:gap-2 overflow-hidden text-4xl md:text-6xl font-extrabold 
+                            className="md:h-20 flex justify-start md:justify-end items-start gap-1 md:gap-2 overflow-hidden text-3xl md:text-6xl font-extrabold 
                             z-20 flex-wrap"
                         >
                             {title}

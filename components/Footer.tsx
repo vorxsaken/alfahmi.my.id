@@ -69,8 +69,8 @@ function Footer() {
                     Touch <br />
                 </div>
                 <div className="flex justify-center items-center gap-6 px-16 md:px-0 flex-wrap md:flex-nowrap md:gap-20 text-sm">
-                    <div className="flex gap-4 relative cursor-pointer after:w-0 after:h-[1.5px] after:absolute after:-bottom-4 after:left-0 after:rounded-full
-                        after:bg-gradient-to-r after:from-[#FCE9F1] after:to-transparent after:hover:w-28 after:transition-all after:duration-500 
+                    <div className="flex gap-2 relative cursor-pointer after:w-0 after:h-[1px] after:absolute after:-bottom-2 after:left-0 after:rounded-full
+                        after:bg-gradient-to-r after:from-[#FCE9F1] after:to-transparent after:hover:w-20 after:transition-all after:duration-500 
                         after:ease-in-out">
                         <AiFillGithub className="text-xl" />
                         <span className="">
@@ -78,15 +78,15 @@ function Footer() {
                         </span>
                     </div>
                     <div className="w-[6px] h-[6px] bg-[#FCE9F1] rounded-full"></div>
-                    <div className="flex gap-4 relative cursor-pointer after:w-0 after:h-[1.5px] after:absolute after:-bottom-4 after:left-0 after:rounded-full
-                        after:bg-gradient-to-r after:from-[#FCE9F1] after:to-transparent after:hover:w-28 after:transition-all after:duration-500 
+                    <div className="flex gap-2 relative cursor-pointer after:w-0 after:h-[1px] after:absolute after:-bottom-2 after:left-0 after:rounded-full
+                        after:bg-gradient-to-r after:from-[#FCE9F1] after:to-transparent after:hover:w-20 after:transition-all after:duration-500 
                         after:ease-in-out">
                         <AiFillInstagram className="text-xl" />
                         <span>Instagram</span>
                     </div>
                     <div className="w-[6px] h-[6px] bg-[#FCE9F1] rounded-full"></div>
-                    <div className="flex gap-4 relative cursor-pointer after:w-0 after:h-[1.5px] after:absolute after:-bottom-4 after:left-0 after:rounded-full
-                        after:bg-gradient-to-r after:from-[#FCE9F1] after:to-transparent after:hover:w-28 after:transition-all after:duration-500 
+                    <div className="flex gap-2 relative cursor-pointer after:w-0 after:h-[1.5px] after:absolute after:-bottom-2 after:left-0 after:rounded-full
+                        after:bg-gradient-to-r after:from-[#FCE9F1] after:to-transparent after:hover:w-20 after:transition-all after:duration-500 
                         after:ease-in-out">
                         <AiFillTwitterCircle className="text-xl" />
                         <span>Twitter</span>
