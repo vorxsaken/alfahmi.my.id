@@ -23,7 +23,7 @@ export default function Transition({skipOutro}: {skipOutro?: boolean}) {
                 skipOutro={skipOutro || false}
                 ease={'power2.inOut'}
                 durationOut={0.5}
-                className="w-[25%] h-screen z-50 bg-[#BCE6EB]">
+                className="w-full h-screen z-50 bg-[#BCE6EB]">
             </AnimateInOut>
             <AnimateInOut
                 from={{ yPercent: 0 }}
@@ -34,7 +34,7 @@ export default function Transition({skipOutro}: {skipOutro?: boolean}) {
                 skipOutro={skipOutro || false}
                 ease={'power2.inOut'}
                 durationOut={0.5}
-                className="w-[25%] h-screen z-50 bg-[#FDCFDF]">
+                className="w-full h-screen z-50 bg-[#FDCFDF]">
             </AnimateInOut>
             <AnimateInOut
                 from={{ yPercent: 0 }}
@@ -45,7 +45,7 @@ export default function Transition({skipOutro}: {skipOutro?: boolean}) {
                 skipOutro={skipOutro || false}
                 ease={'power2.inOut'}
                 durationOut={0.5}
-                className="w-[25%] h-screen z-50 bg-[#FBBEDF]">
+                className="w-full h-screen z-50 bg-[#FBBEDF]">
             </AnimateInOut>
             <AnimateInOut
                 from={{ yPercent: 0 }}
@@ -56,7 +56,7 @@ export default function Transition({skipOutro}: {skipOutro?: boolean}) {
                 skipOutro={skipOutro || false}
                 ease={'power2.inOut'}
                 durationOut={0.5}
-                className="w-[25%] h-screen z-50 bg-[#FCA3CC]">
+                className="w-full h-screen z-50 bg-[#FCA3CC]">
             </AnimateInOut>
         </AnimateInOut>
     )
