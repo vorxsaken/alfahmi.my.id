@@ -24,62 +24,6 @@ export default function Home({ allPost }: { allPost: Post[] }) {
 
   return (
     <Layout title="Start">
-      <AnimateInOut
-        from={{ yPercent: 0 }}
-        to={{ yPercent: -100 }}
-        delayIn={0.5}
-        delayOut={0}
-        durationIn={0.5}
-        skipOutro={false}
-        ease={'power4.inOut'}
-        durationOut={0.1}
-        className="w-screen h-screen flex flex-row fixed top-0"
-      >
-        <AnimateInOut
-          from={{ yPercent: 0 }}
-          to={{ yPercent: -100 }}
-          delayIn={0}
-          delayOut={0.15}
-          durationIn={1}
-          skipOutro={false}
-          ease={'power2.inOut'}
-          durationOut={0.5}
-          className="w-full h-screen z-50 bg-[#BCE6EB]">
-        </AnimateInOut>
-        <AnimateInOut
-          from={{ yPercent: 0 }}
-          to={{ yPercent: -100 }}
-          delayIn={0.1}
-          delayOut={0.2}
-          durationIn={1}
-          skipOutro={false}
-          ease={'power2.inOut'}
-          durationOut={0.5}
-          className="w-full h-screen z-50 bg-[#FDCFDF]">
-        </AnimateInOut>
-        <AnimateInOut
-          from={{ yPercent: 0 }}
-          to={{ yPercent: -100 }}
-          delayIn={0.2}
-          delayOut={0.25}
-          durationIn={1}
-          skipOutro={ false}
-          ease={'power2.inOut'}
-          durationOut={0.5}
-          className="w-full h-screen z-50 bg-[#FBBEDF]">
-        </AnimateInOut>
-        <AnimateInOut
-          from={{ yPercent: 0 }}
-          to={{ yPercent: -100 }}
-          delayIn={0.3}
-          delayOut={0.3}
-          durationIn={1}
-          skipOutro={ false}
-          ease={'power2.inOut'}
-          durationOut={0.5}
-          className="w-full h-screen z-50 bg-[#FCA3CC]">
-        </AnimateInOut>
-      </AnimateInOut>
       <div className="w-full h-screen xl:h-[650px] 2xl:h-[800px] relative overflow-hidden">
         <Particles isSmall={isSmall} />
         <div className="w-full h-full flex items-center">
