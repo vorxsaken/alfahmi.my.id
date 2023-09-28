@@ -37,7 +37,7 @@ export default function Home({ allPost }: { allPost: Post[] }) {
           </div>
         </div>
       </div>
-      <PinnedProjects projects={allPost} isSmall={isSmall}/>
+      <PinnedProjects projects={allPost} isSmall={isSmall} />
       <Footer />
     </Layout>
   )

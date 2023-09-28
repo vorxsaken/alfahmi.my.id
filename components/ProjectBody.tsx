@@ -1,5 +1,4 @@
 import Image from "next/image"
-import image2 from '../assets/2.jpg'
 import HorizontalSwipe from "./HorizontalSwipe"
 import { Inria_Serif } from 'next/font/google';
 import { useIsomorphic } from "@/lib/useIsomorphic";
