@@ -3,17 +3,19 @@ import { ReactNode } from "react"
 import Navigation from "./Navigation"
 import Head from "next/head"
 
-export default function Layout({children, id, className, title}: {children: ReactNode, id?: string, className?: string, title: string}) {
+export default function Layout({ children, id, className, title }: { children: ReactNode, id?: string, className?: string, title: string }) {
   return (
-    <div id={id} className={`w-full h-screen ${className}`}>
+    <div className="flex flex-col items-center">
+      <Transition />
+      <div id={id} className={`w-full h-screen lg:max-w-[1366px] xl:max-w-[1920px] md:h-auto md:max-h-[2160px] relative ${className}`}>
         <Head>
-            <title>{`${title} - Alfahmi 😉`}</title>
-            <meta property="og:title" content={`${title} - Alfahmi`} key={title} />
+          <title>{`${title} - Alfahmi 😉`}</title>
+          <meta property="og:title" content={`${title} - Alfahmi`} key={title} />
         </Head>
 
         <Navigation />
-        <Transition />
-        { children }
+        {children}
+      </div>
     </div>
   )
 }

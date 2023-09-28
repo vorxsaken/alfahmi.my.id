@@ -18,7 +18,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <TransitionDispatcher>
       <TransitionProvider>
         <TransitionLayout>
-          <Component {...pageProps} />
+            <Component {...pageProps} />
         </TransitionLayout>
       </TransitionProvider>
     </TransitionDispatcher>

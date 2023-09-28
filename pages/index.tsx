@@ -23,75 +23,21 @@ export default function Home({ allPost }: { allPost: Post[] }) {
   }
 
   return (
-    <Layout title="Start" className="relative">
-      {/* <AnimateInOut
-            from={{ yPercent: 0 }}
-            to={{ yPercent: -100 }}
-            delayIn={0.5}
-            delayOut={0.5}
-            durationIn={0.5}
-            skipOutro={false}
-            ease={'power4.inOut'}
-            durationOut={0.5}
-            className="w-screen h-screen flex flex-row fixed top-0 z-50"
-        >
-            <AnimateInOut
-                from={{ yPercent: 0 }}
-                to={{ yPercent: -100 }}
-                delayIn={0}
-                delayOut={0.6}
-                durationIn={1}
-                skipOutro={false}
-                ease={'power2.inOut'}
-                durationOut={1}
-                className="w-[25%] h-screen z-50 bg-[#BCE6EB]">
-            </AnimateInOut>
-            <AnimateInOut
-                from={{ yPercent: 0 }}
-                to={{ yPercent: -100 }}
-                delayIn={0.1}
-                delayOut={0.7}
-                durationIn={1}
-                skipOutro={false}
-                ease={'power2.inOut'}
-                durationOut={1}
-                className="w-[25%] h-screen z-50 bg-[#FDCFDF]">
-            </AnimateInOut>
-            <AnimateInOut
-                from={{ yPercent: 0 }}
-                to={{ yPercent: -100 }}
-                delayIn={0.2}
-                delayOut={0.8}
-                durationIn={1}
-                skipOutro={false}
-                ease={'power2.inOut'}
-                durationOut={1}
-                className="w-[25%] h-screen z-50 bg-[#FBBEDF]">
-            </AnimateInOut>
-            <AnimateInOut
-                from={{ yPercent: 0 }}
-                to={{ yPercent: -100 }}
-                delayIn={0.3}
-                delayOut={0.9}
-                durationIn={1}
-                skipOutro={false}
-                ease={'power2.inOut'}
-                durationOut={1}
-                className="w-[25%] h-screen z-50 bg-[#FCA3CC]">
-            </AnimateInOut>
-        </AnimateInOut> */}
-      <Particles isSmall={isSmall} />
-      <div className="w-full h-full flex items-center">
-        <div className=" w-full flex flex-col gap-4 justify-center items-center relative bottom-[3%] md:bottom-0">
-          <div className="font-bold text-4xl md:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-[#F31559] via-[#FF52A2] to-[#FFB07F]">
-            Hello, Im Alfahmi
+    <Layout title="Start">
+      <div className="w-full h-screen xl:h-[650px] 2xl:h-[800px] relative overflow-hidden">
+        <Particles isSmall={isSmall} />
+        <div className="w-full h-full flex items-center">
+          <div className=" w-full flex flex-col gap-4 justify-center items-center relative bottom-[3%] md:bottom-0">
+            <div className="font-bold text-4xl md:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-[#F31559] via-[#FF52A2] to-[#FFB07F]">
+              Hello, Im Alfahmi
+            </div>
+            <p className="text-color text-sm md:text-lg font-semibold max-w-[340px] md:max-w-lg text-center opacity-70">
+              Hi im fahmi, frontend developer from indonesia, welcome to my page.
+            </p>
           </div>
-          <p className="text-color text-sm md:text-lg font-semibold max-w-[340px] md:max-w-lg text-center opacity-70">
-            Hi im fahmi, frontend developer from indonesia, welcome to my page.
-          </p>
         </div>
       </div>
-      <PinnedProjects projects={allPost} isSmall={isSmall} />
+      <PinnedProjects projects={allPost} isSmall={isSmall}/>
       <Footer />
     </Layout>
   )

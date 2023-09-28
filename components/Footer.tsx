@@ -47,7 +47,8 @@ function Footer() {
             <svg id="waveSvg" className="w-full h-full absolute top-0" viewBox="0 0 100 100" preserveAspectRatio="none">
                 <path id="wave" fill="#080202" d="M 0 100 V 100 Q 50 100 100 100 V 100 z" />
             </svg>
-            <div className="w-full h-full top-0 absolute font-extrabold text-[#FCE9F1] flex flex-col justify-start items-center gap-[7.5rem] md:gap-[6.5rem] py-10 opacity-5 md:opacity-10">
+            <div className="w-full h-full top-0 absolute font-extrabold text-[#FCE9F1] flex flex-col justify-center items-center gap-[7.5rem] 
+            md:gap-[6.5rem] py-10 opacity-5 md:opacity-10">
                 {
                     [...Array(5)].map((i, index) => (
                         <div className="flex justify-start items-start gap-[3.5rem] md:gap-56" key={index}>

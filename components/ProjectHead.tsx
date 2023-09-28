@@ -83,7 +83,7 @@ export default function ProjectHead({ title, date, coverImage, excerpt }: Projec
 
     return (
         <div id="projectCoverContainer" className="w-full flex flex-col justify-start items-start mt-[10%] md:mt-[5%] gap-8">
-            <div id="galleryContainer" className="w-full h-[110vh] md:h-[600px] flex justify-center items-center relative">
+            <div id="galleryContainer" className="w-full h-[110vh] md:h-[600px] xl:h-[100vh] flex justify-center items-center relative">
                 <span id="galleryTitleOutside" className="absolute -z-10 text-center flex justify-center items-center rounded-sm font-extrabold md:text-5xl 
                         text-3xl top-[52px] md:top-16 py-4 px-2 uppercase"
                 >

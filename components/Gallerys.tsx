@@ -164,7 +164,7 @@ export default function Gallerys({ projects }: { projects: Projects }) {
         <div id="projectsContainer" onMouseMove={(e) => mouseMove(e)} className="w-full h-screen flex justify-center items-start overflow-hidden relative">
             {
                 projects.map((project) => (
-                    <div key={project.slug} id="galleryContainer" className={`w-full h-[600px] flex justify-center items-center absolute opacity-0 md:top-[9%] top-[4%]  select-none font-coiny`}>
+                    <div key={project.slug} id="galleryContainer" className={`w-full h-[600px] flex justify-center items-center absolute opacity-0 md:top-[9%] top-[4%] 2xl:top-[17%] select-none font-coiny`}>
                         <span id="galleryTitleOutside" className="absolute -z-10 text-center flex justify-center items-center rounded-sm font-extrabold md:text-5xl 
                         text-3xl top-14 md:top-16 py-4 px-2"
                         >
@@ -179,7 +179,7 @@ export default function Gallerys({ projects }: { projects: Projects }) {
                                 {project.title}
                             </span>
                         </span>
-                        <div onClick={() => goToProject(`/project/${project.slug}`)} id="gallery" className={`w-72 h-96 md:w-[500px] md:h-96 bg-red-300 relative overflow-hidden flex justify-center items-start rounded-md`}>
+                        <div onClick={() => goToProject(`/project/${project.slug}`)} id="gallery" className={`w-72 h-96 md:w-[500px] md:h-96 2xl:w-[600px] bg-red-300 relative overflow-hidden flex justify-center items-start rounded-xl`}>
                             <Image id="galleryImage" fill src={project.coverImage} alt='image' className="object-cover md:object-cover" style={{ objectPosition: '50% 60%' }} />
                             <span id="galleryTitleInside" className="w-[100vw] absolute z-10 text-center flex justify-center items-center rounded-sm font-extrabold md:text-5xl 
                             text-3xl -top-[3.2rem] md:-top-[11.5%] py-4 px-2"

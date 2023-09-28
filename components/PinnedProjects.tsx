@@ -22,8 +22,9 @@ function PinnedProjects({ projects, isSmall }: { projects: Projects, isSmall: bo
         const particleTl = gsap.timeline({
             scrollTrigger: {
                 trigger: '#projectContainer',
-                start: 'top top',
-                scrub: 1
+                start: 'top +=300px',
+                end:'+=2500px top' ,
+                scrub: 1,
             },
         });
         const lines = gsap.utils.toArray('#lineSvg') as any;
@@ -34,7 +35,7 @@ function PinnedProjects({ projects, isSmall }: { projects: Projects, isSmall: bo
             tl.to(card[i], {
                 scrollTrigger: {
                     trigger: card[i],
-                    start: isSmall ? 'top +=600' : 'top +=500px',
+                    start: isSmall ? 'top +=600' : 'top +=600px',
                     scrub: 0.5,
                 },
                 x: i % 2 == 0 ? isSmall ? 12 : 50 : isSmall ? -12 : -50,
@@ -48,7 +49,7 @@ function PinnedProjects({ projects, isSmall }: { projects: Projects, isSmall: bo
             tlLine.to(line, {
                 scrollTrigger: {
                     trigger: line,
-                    start: 'top +=400px',
+                    start: 'top +=500px',
                     scrub: 1,
                 },
                 strokeDashoffset: 700,
@@ -59,7 +60,7 @@ function PinnedProjects({ projects, isSmall }: { projects: Projects, isSmall: bo
 
         particles.forEach((particle: any) => {
             particleTl.to(particle, {
-                y: -200,
+                y: -300,
                 duration: 1,
                 ease: 'power4.out'
             }, '<')
@@ -67,11 +68,12 @@ function PinnedProjects({ projects, isSmall }: { projects: Projects, isSmall: bo
 
     }, [])
     return (
-        <div id="projectContainer" className="w-full h-auto flex flex-col justify-start items-center gap-64 md:gap-40 pb-56 relative mt-10 pt-10 md:pt-0 md:mt-0 overflow-x-hidden overflow-y-visible md:overflow-x-visible">
+        <div id="projectContainer" className="w-full md:h-full flex flex-col justify-start items-center gap-56 md:gap-40 pb-56 relative mt-10 pt-10 
+        md:pt-0 md:mt-0 overflow-x-hidden overflow-y-visible md:overflow-x-visible">
             {
                 !isSmall && (
                     <>
-                        <div id="particleShapeContainer" className="w-[45%] h-[85vh] absolute top-[15%] left-[1%]">
+                        <div id="particleShapeContainer" className="w-[45%] h-[700px] absolute top-[25%] left-[0%]">
                             <div className="w-[90%] absolute h-36 flex flex-col justify-start items-start gap-2 uppercase rotate-90 right-40 top-64">
                                 <span className="text-5xl md:text-[9rem] font-bold text-slate-900 text-start" style={{ lineHeight: '7rem' }}>
                                     second
@@ -81,7 +83,7 @@ function PinnedProjects({ projects, isSmall }: { projects: Projects, isSmall: bo
                                 </span>
                             </div>
                         </div>
-                        <div id="particleShapeContainer" className="w-[45%] h-[85vh] absolute top-[0%] right-[1%] flex justify-center items-center">
+                        <div id="particleShapeContainer" className="w-[45%] h-[700px] absolute top-[2%] right-[0%] flex justify-center items-center">
                             <div className="w-[90%] absolute h-36 flex flex-col justify-start items-start gap-2 uppercase rotate-90 left-40 top-64">
                                 <span className="text-[9rem] font-bold text-slate-900 text-start" style={{ lineHeight: '7rem' }}>
                                     first
@@ -91,7 +93,7 @@ function PinnedProjects({ projects, isSmall }: { projects: Projects, isSmall: bo
                                 </span>
                             </div>
                         </div>
-                        <div id="particleShapeContainer" className="w-[45%] h-[85vh] absolute bottom-[28%] right-[1%]">
+                        <div id="particleShapeContainer" className="w-[45%] h-[700px] absolute bottom-[15%] right-[1%]">
                             <div className="w-[90%] absolute h-36 flex flex-col justify-start items-start gap-2 uppercase rotate-90 left-40 top-64">
                                 <span className="text-[9rem] font-bold text-slate-900 text-start" style={{ lineHeight: '7rem' }}>
                                     third
@@ -101,7 +103,7 @@ function PinnedProjects({ projects, isSmall }: { projects: Projects, isSmall: bo
                                 </span>
                             </div>
                         </div>
-                        <div id="particleShapeContainer" className="w-[45%] h-[85vh] absolute bottom-[1%] left-[1%]">
+                        <div id="particleShapeContainer" className="w-[45%] h-[700px] absolute -bottom-[8%] left-[1%]">
                             <div className="w-[90%] absolute h-36 flex flex-col justify-start items-start gap-2 uppercase rotate-90 right-40 top-64">
                                 <span className="text-[9rem] font-bold text-slate-900 text-start" style={{ lineHeight: '7rem' }}>
                                     fourth
@@ -119,7 +121,7 @@ function PinnedProjects({ projects, isSmall }: { projects: Projects, isSmall: bo
                     <div className="w-full" key={index}>
                         {
                             index % 2 === 0 ? (
-                                <div className="w-full flex justify-start items-start relative">
+                                <div className="w-full h-[280px] md:h-[400px] flex justify-start items-start relative">
                                     {
                                         index !== (projects.length - 1) && (
                                             <svg
@@ -128,7 +130,7 @@ function PinnedProjects({ projects, isSmall }: { projects: Projects, isSmall: bo
                                                 height={isSmall ? "200" : "330"}
                                                 viewBox={isSmall ? "-20 100 280 160" : "-20 100 280 300"}
                                                 fill="none"
-                                                className="absolute right-[15%] top-[110%] md:right-[30%] md:top-40"
+                                                className="absolute right-[15%] top-[90%] md:right-[30%] 2xl:right-[35%] md:top-[73%] 2xl:top-[70%]"
                                             >
                                                 <path
                                                     id="lineSvg"
@@ -153,10 +155,20 @@ function PinnedProjects({ projects, isSmall }: { projects: Projects, isSmall: bo
                                             </svg>
                                         )
                                     }
-                                    <Card slug={project.slug as string} title={project.title} desc={project.excerpt as any} cover={project.coverImage} id="card" cardId={`redCard-${index}`} imageId={`red-${index}`} color="red" className="ml-0 md:ml-[18%] opacity-0" />
+                                    <Card
+                                        slug={project.slug as string}
+                                        title={project.title}
+                                        desc={project.excerpt as any}
+                                        cover={project.coverImage}
+                                        id="card"
+                                        cardId={`redCard-${index}`}
+                                        imageId={`red-${index}`}
+                                        color="red"
+                                        className="-ml-2 xl:ml-[23%] opacity-0 absolute top-0"
+                                    />
                                 </div>
                             ) : (
-                                <div className="w-full flex justify-end items-start relative">
+                                <div className="w-full h-[280px] md:h-[400px] flex justify-end items-start relative">
                                     {
                                         index !== (projects.length - 1) && (
                                             <svg
@@ -165,7 +177,7 @@ function PinnedProjects({ projects, isSmall }: { projects: Projects, isSmall: bo
                                                 height={isSmall ? "200" : "380"}
                                                 viewBox={isSmall ? "-20 100 280 160" : "-20 100 280 300"}
                                                 fill="none"
-                                                className="absolute right-[15%] top-[110%] md:left-[30%] md:top-40"
+                                                className="absolute right-[15%] top-[92%] md:left-[35%] md:top-[75%] 2xl:top-[75%] 2xl:left-[40%]"
                                             >
                                                 <path
                                                     id="lineSvg"
@@ -190,7 +202,17 @@ function PinnedProjects({ projects, isSmall }: { projects: Projects, isSmall: bo
                                             </svg>
                                         )
                                     }
-                                    <Card slug={project.slug as string} title={project.title} desc={project.excerpt as any} cover={project.coverImage} id="card" cardId={`yellowCard-${index}`} imageId={`yellow-${index}`} color="yellow" className="mr-0 md:mr-[18%] opacity-0" />
+                                    <Card
+                                        slug={project.slug as string}
+                                        title={project.title}
+                                        desc={project.excerpt as any}
+                                        cover={project.coverImage}
+                                        id="card"
+                                        cardId={`yellowCard-${index}`}
+                                        imageId={`yellow-${index}`}
+                                        color="yellow"
+                                        className="mr-0 md:mr-[18%] opacity-0 absolute md:top-0 -top-7"
+                                    />
                                 </div>
                             )
                         }

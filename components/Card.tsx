@@ -99,8 +99,8 @@ function Card(props: CardType) {
     }, [])
 
     return (
-        <div id={id} className={`w-72 h-60 md:w-1/4 md:h-[50vh] relative flex justify-center items-center ${className}`}>
-            <div id={imageId} className='w-full h-full md:w-96 md:h-60 absolute overflow-hidden rounded-2xl -rotate-12 shadow-xl opacity-40 transition-opacity duration-100 ease-in'>
+        <div id={id} className={`w-72 h-60 xl:w-[25vw] md:w-1/4 md:h-[400px] flex justify-center items-center ${className}`}>
+            <div id={imageId} className='w-full h-full md:w-96 md:h-60 xl:w-full xl:h-64 absolute overflow-hidden rounded-2xl -rotate-12 shadow-xl opacity-40 transition-opacity duration-100 ease-in'>
                 <Image className='object-cover' src={cover} fill alt='image' />
                 <div
                     id={imageId + 'eye'}
@@ -112,7 +112,7 @@ function Card(props: CardType) {
                     <AiFillEye />
                 </div>
             </div>
-            <div id={cardId} className={`w-full h-full md:w-96 md:h-60 rounded-2xl flex flex-col justify-start items-start gap-3 px-5 py-4 shadow-xl absolute rotate-12 
+            <div id={cardId} className={`w-full h-full md:w-full md:h-60 xl:h-64 rounded-2xl flex flex-col justify-start items-start gap-3 px-5 py-4 shadow-xl absolute rotate-12 
             transition-opacity duration-100 ease-in ${Color}`}>
                 <span className='font-extrabold text-base uppercase text-black flex justify-between items-center w-full'>
                     <span>project</span>

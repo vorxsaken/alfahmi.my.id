@@ -9,6 +9,7 @@ import ProjectBody from "@/components/ProjectBody";
 import { getPostBySlug, getAllPosts, markdownToHtml, getProjectImages } from '../../lib/utils';
 import { Project, ProjectParams } from "@/lib/types";
 import Head from "next/head";
+import AnimateUpIn from "@/animations/AnimateUpIn";
 
 const Inria = Fredericka_the_Great({ weight: "400", subsets: ["latin"] });
 
