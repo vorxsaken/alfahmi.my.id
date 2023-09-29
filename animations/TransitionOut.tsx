@@ -8,7 +8,7 @@ function TransitionOut() {
             delay={0.5}
             duration={1}
             ease="power4.inOut"
-            className="w-screen h-screen flex flex-row fixed top-0 z-50"
+            style={{width: '100vw', height: '100vh', display: 'flex', flexDirection: 'row', position: 'fixed', top: '0px', zIndex: 50}}
         >
             <AnimateOut
                 set={{ypercent: -100}}
