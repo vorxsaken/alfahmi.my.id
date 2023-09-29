@@ -2,7 +2,6 @@ import AnimateInOut from "@/animations/AnimateInOut"
 
 export default function Transition({skipOutro}: {skipOutro?: boolean}) {
     return (
-        // <div></div>
         <AnimateInOut
             from={{ yPercent: 0 }}
             to={{ yPercent: -100 }}
@@ -12,7 +11,7 @@ export default function Transition({skipOutro}: {skipOutro?: boolean}) {
             skipOutro={skipOutro || false}
             ease={'power4.inOut'}
             durationOut={0.1}
-            className="w-screen h-screen flex flex-row fixed top-0 z-50"
+            style={{width: '100vw', height: '100vh', display: 'flex', flexDirection: 'row', position: 'fixed', top: '0px', zIndex: 50}}
         >
             <AnimateInOut
                 from={{ yPercent: 0 }}
