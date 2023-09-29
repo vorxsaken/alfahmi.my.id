@@ -2,8 +2,9 @@ import { useRef, useContext, ReactNode } from 'react'
 import { TransitionContext } from '@/contexts/Context'
 import { useIsomorphic } from '@/lib/useIsomorphic';
 import { gsap } from 'gsap';
+import { AnimateOutType, divType } from '@/lib/types';
 
-function AnimateOut({children, to, set, delay, duration, ease, className}: {children: ReactNode, to: any, set: any, delay: number, duration: number, className: string, ease?: string}) {
+function AnimateOut({children, to, set, delay, duration, ease, className, ...props}: AnimateOutType & divType) {
     
     const ref = useRef(null);
     const { timeline } = useContext(TransitionContext) as any;
@@ -24,7 +25,7 @@ function AnimateOut({children, to, set, delay, duration, ease, className}: {chil
     }, [])
 
     return (
-        <div ref={ref} className={className}>
+        <div ref={ref} className={className} {...props}>
             { children }
         </div>
     )

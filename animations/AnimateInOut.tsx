@@ -2,9 +2,9 @@ import { gsap } from 'gsap'
 import { useContext, useRef } from 'react'
 import { useIsomorphic } from '@/lib/useIsomorphic'
 import { TransitionContext } from '@/contexts/Context'
-import { AnimateInOutType } from '@/lib/types'
+import { AnimateInOutType, divType } from '@/lib/types'
 
-function AnimateInOut(props: AnimateInOutType) {
+function AnimateInOut(props: AnimateInOutType & divType) {
     const { timeline } = useContext(TransitionContext) as any;
     const ref = useRef(null);
 
@@ -36,7 +36,7 @@ function AnimateInOut(props: AnimateInOutType) {
     }, [props.skipOutro])
 
     return (
-        <div ref={ref} className={props.className} id={props.id}>
+        <div ref={ref} className={props.className} id={props.id} {...props}>
             {props.children}
         </div>
     )

@@ -16,7 +16,7 @@ function TransitionOut() {
                 delay={0.5}
                 duration={1}
                 ease="power4.inOut"
-                className="w-full h-screen z-50 bg-[#BCE6EB] ">
+                style={{width: '100%', height: '100vh', zIndex: 50, backgroundColor: '#BCE6EB'}}>
             </AnimateOut>
             <AnimateOut
                 set={{yPercent: -100}}
@@ -24,7 +24,7 @@ function TransitionOut() {
                 delay={0.6}
                 duration={1}
                 ease="power4.inOut"
-                className="w-full h-screen z-50 bg-[#FDCFDF]">
+                style={{width: '100%', height: '100vh', zIndex: 50, backgroundColor: '#FDCFDF'}}>
             </AnimateOut>
             <AnimateOut
                 set={{yPercent: -100}}
@@ -32,7 +32,7 @@ function TransitionOut() {
                 delay={0.7}
                 duration={1}
                 ease="power4.inOut"
-                className="w-full h-screen z-50 bg-[#FBBEDF]">
+                style={{width: '100%', height: '100vh', zIndex: 50, backgroundColor: '#FBBEDF'}}>
             </AnimateOut>
             <AnimateOut
                 set={{yPercent: -100}}
@@ -40,7 +40,7 @@ function TransitionOut() {
                 delay={0.8}
                 duration={1}
                 ease="power4.inOut"
-                className="w-full h-screen z-50 bg-[#FCA3CC]">
+                style={{width: '100%', height: '100vh', zIndex: 50, backgroundColor: '#FCA3CC'}}>
             </AnimateOut>
         </AnimateOut>
     )

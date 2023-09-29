@@ -1,4 +1,7 @@
 import { ReactNode } from 'react';
+import React from 'react';
+
+export type divType = React.ComponentProps<'div'>
 
 export type AnimateInOutType = {
     children: ReactNode,
@@ -30,6 +33,15 @@ export type AnimateWordUpIn = {
     duration: number, 
     delay: number, 
     className?: string
+}
+
+export type AnimateOutType = {
+    children: ReactNode, 
+    to: any, 
+    set: any, 
+    delay: number, 
+    duration: number,
+    ease?: string
 }
 
 export type AnimateUpInType = { 
