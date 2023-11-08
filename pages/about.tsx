@@ -26,7 +26,7 @@ function About() {
                             ))
                         }
                     </div>
-                    <div className="w-full h-full mt-[50%] md:mt-0 flex flex-col justify-start items-start gap-36 md:gap-6 z-50">
+                    <div className="w-full h-full mt-[50%] md:mt-0 flex flex-col justify-start items-start gap-10 md:gap-6 z-50">
                         <div className={`w-full h-[10%] hidden md:flex justify-end items-end text-[#4A4A4A] relative font-inria-serif`}>
                             <AnimateUpIn
                                 duration={1}
@@ -62,7 +62,7 @@ function About() {
                                 </AnimateUpIn>
                             </div>
                         </div>
-                        <div className="w-full flex justify-end items-start">
+                        <div className="w-full flex justify-end items-start mt-20 md:mt-0">
                             <div
                                 className="w-full md:w-[80%] h-full flex flex-col justify-start items-end relative text-7xl md:text-[15rem] font-extrabold text-[#808080] font-coiny"
                                 style={{ lineHeight: 1 }}
@@ -89,7 +89,7 @@ function About() {
                                     END ---
                                 </AnimateWordUpIn>
                                 <AnimateWordUpIn
-                                className="w-full h-20 md:h-64 flex justify-end items-start gap-4 overflow-hidden"
+                                    className="w-full h-20 md:h-64 flex justify-end items-start gap-4 overflow-hidden"
                                     delay={0.8}
                                     duration={0.5}
                                 >
@@ -97,7 +97,7 @@ function About() {
                                 </AnimateWordUpIn>
                             </div>
                         </div>
-                        <div className={`w-full h-auto md:h-[30%] flex md:justify-center justify-start items-center text-[#4A4A4A] font-inria-serif`}>
+                        <div className={`w-full h-auto md:h-[30%] flex md:justify-center justify-start items-center text-[#4A4A4A] font-inria-serif mt-10 md:mt-0`}>
                             <AnimateUpIn
                                 duration={1}
                                 delay={0.9}
@@ -110,11 +110,11 @@ function About() {
                                 </p>
                             </AnimateUpIn>
                         </div>
-                        <div className={`w-full h-[10%] md:hidden flex justify-end items-end text-[#4A4A4A] relative font-inria-serif`}>
+                        <div className={`w-full h-auto md:h-[30%] flex md:justify-center justify-start items-center text-[#4A4A4A] font-inria-serif`}>
                             <AnimateUpIn
                                 duration={1}
                                 delay={0.9}
-                                className="w-[300px] md:w-[400px] flex justify-start items-start gap-4 text-xs opacity-0 relative -top-36 -left-3"
+                                className="w-full md:w-[500px] flex justify-start items-start gap-4 text-xs md:text-[0.7rem] ml-0 md:ml-64 opacity-0"
                             >
                                 <div className="w-2 h-2 rounded-full bg-[#4A4A4A] mt-2 opacity-60">
                                 </div>
@@ -123,6 +123,7 @@ function About() {
                                 </p>
                             </AnimateUpIn>
                         </div>
+
                     </div>
                 </div>
 

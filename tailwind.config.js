@@ -20,7 +20,7 @@ module.exports = {
         wrapperClass: 'markdown',
         img: {
           width: '100%',
-          borderRadius: '10px'
+          borderRadius: '5px'
         },
         li: {
           marginBottom: '6px',
@@ -35,7 +35,7 @@ module.exports = {
           img: {
             width: '30%',
             height: 'auto',
-            borderRadius: '10px'
+            borderRadius: '5px'
           }
         }
       },
