@@ -110,7 +110,7 @@ function About() {
                                 </p>
                             </AnimateUpIn>
                         </div>
-                        <div className={`w-full h-auto md:h-[30%] flex md:justify-center justify-start items-center text-[#4A4A4A] font-inria-serif`}>
+                        <div className={`w-full h-auto md:h-[30%] flex md:hidden md:justify-center justify-start items-center text-[#4A4A4A] font-inria-serif`}>
                             <AnimateUpIn
                                 duration={1}
                                 delay={0.9}
