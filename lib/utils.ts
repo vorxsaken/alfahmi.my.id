@@ -12,11 +12,9 @@ function getPostSlugs() {
 
 function getProjectImages (slug: string) {
     const landscapeImages = fs.readdirSync(join(process.cwd(), `public/projects/${slug}/landscape`));
-    const portraitImages = fs.readdirSync(join(process.cwd(), `public/projects/${slug}/portrait`));
     
     return {
-        landscapeImages,
-        portraitImages
+        landscapeImages
     };
 }
 

@@ -9,7 +9,6 @@ import ProjectBody from "@/components/ProjectBody";
 import { getPostBySlug, getAllPosts, markdownToHtml, getProjectImages } from '../../lib/utils';
 import { Project, ProjectParams } from "@/lib/types";
 import Head from "next/head";
-import AnimateUpIn from "@/animations/AnimateUpIn";
 
 const Inria = Fredericka_the_Great({ weight: "400", subsets: ["latin"] });
 
@@ -51,8 +50,8 @@ function Project({ project }: { project: Project }) {
                         </div>
                     </div>
                 </div>
-                <ProjectHead title={project.title} coverImage={project.coverImage} date={project.date} excerpt={project.excerpt} />
-                <ProjectBody content={project.content} landscape={project.landscape} portrait={project.portrait} slug={project.slug} />
+                <ProjectHead title={project.title} coverImage={project.coverImage} date={project.date} excerpt={project.excerpt} demo={project.demo} />
+                <ProjectBody content={project.content} />
             </div>
 
         </div>
@@ -83,7 +82,8 @@ export const getStaticProps = async ({ params }: { params: ProjectParams }) => {
         'slug',
         'coverImage',
         'excerpt',
-        'content'
+        'content',
+        'demo'
     ])
 
     const galleryImages = getProjectImages(project.slug);
@@ -94,7 +94,6 @@ export const getStaticProps = async ({ params }: { params: ProjectParams }) => {
             project: {
                 ...project,
                 landscape: galleryImages.landscapeImages,
-                portrait: galleryImages.portraitImages,
                 content
             }
         }

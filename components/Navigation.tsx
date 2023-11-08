@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { gsap } from 'gsap'
 import { useIsomorphic } from '@/lib/useIsomorphic';
 import Router from 'next/router';

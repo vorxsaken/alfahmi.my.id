@@ -1,26 +1,13 @@
 import { getAllPosts } from "@/lib/utils";
 import type { Post } from "@/lib/types";
-import Navigation from "@/components/Navigation";
 import Particles from "@/components/Particles";
-import TitleAlbum from "@/components/TitleAlbum";
 import PinnedProjects from "@/components/PinnedProjects";
 import Footer from "@/components/Footer";
-import Transition from "@/animations/Transition";
-import AnimateInOut from "@/animations/AnimateInOut";
 import { useMediaQuery } from "@/lib/useMediaQuery";
 import Layout from "@/components/Layout";
+
 export default function Home({ allPost }: { allPost: Post[] }) {
   const isSmall = useMediaQuery('(max-width: 600px)')
-
-  const toggleDarkMode = () => {
-    if (localStorage.getItem('theme')) {
-      document.documentElement.classList.remove('dark');
-      localStorage.removeItem('theme');
-    } else {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    }
-  }
 
   return (
     <Layout title="Start">
@@ -45,7 +32,7 @@ export default function Home({ allPost }: { allPost: Post[] }) {
 
 
 export const getStaticProps = async () => {
-  const allPost = getAllPosts([
+  const getPost = getAllPosts([
     'title',
     'date',
     'slug',
@@ -53,6 +40,8 @@ export const getStaticProps = async () => {
     'excerpt'
   ])
 
+  const allPost = [...Array(4)].map((arr, index) => getPost[index]);
+  
   return {
     props: { allPost }
   }

@@ -1,12 +1,14 @@
 import Router from "next/router";
 import { TransitionContext } from "@/contexts/Context";
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import Image from "next/image";
 import { useTransitionReducer } from "@/contexts/Reducer";
 import { useIsomorphic } from "@/lib/useIsomorphic";
 import gsap from 'gsap'
 import Observer from "gsap/dist/Observer";
 import { Projects } from "@/lib/types";
+
+gsap.registerPlugin(Observer);
 
 export default function Gallerys({ projects }: { projects: Projects }) {
 
@@ -23,6 +25,7 @@ export default function Gallerys({ projects }: { projects: Projects }) {
 
     const [data, dispatch] = useTransitionReducer();
     const { timeline } = useContext(TransitionContext) as any;
+    const el = useRef(null);
 
     const goToProject = (url: string) => {
         timeline.clear();
@@ -136,19 +139,21 @@ export default function Gallerys({ projects }: { projects: Projects }) {
     }
 
     useIsomorphic(() => {
-        gsap.registerPlugin(Observer);
-        galleryContainer = gsap.utils.toArray('#galleryContainer');
-        wrap = gsap.utils.wrap(0, galleryContainer.length);
+        const ctx = gsap.context(() => {
 
-        Observer.create({
-            target: '#projectsContainer',
-            type: "wheel, touch, pointer",
-            wheelSpeed: -1,
-            onUp: () => !animating && scroll(currentIndex + 1, 1),
-            onDown: () => !animating && scroll(currentIndex - 1, -1),
-            tolerance: 10,
-            preventDefault: true
-        })
+            galleryContainer = gsap.utils.toArray('#galleryContainer');
+            wrap = gsap.utils.wrap(0, galleryContainer.length);
+
+            Observer.create({
+                target: '#projectsContainer',
+                type: "wheel, touch, pointer",
+                wheelSpeed: -1,
+                onUp: () => !animating && scroll(currentIndex + 1, 1),
+                onDown: () => !animating && scroll(currentIndex - 1, -1),
+                tolerance: 10,
+                preventDefault: true
+            })
+        }, el)
 
         const timeout = setTimeout(() => {
             scroll(0, 1);
@@ -156,35 +161,63 @@ export default function Gallerys({ projects }: { projects: Projects }) {
 
         return () => {
             clearTimeout(timeout);
+            ctx.revert()
         }
 
     }, []);
 
     return (
-        <div id="projectsContainer" onMouseMove={(e) => mouseMove(e)} className="w-full h-screen flex justify-center items-start overflow-hidden relative">
+        <div
+            id="projectsContainer"
+            ref={el}
+            onMouseMove={(e) => mouseMove(e)}
+            className="w-full h-screen flex justify-center items-start overflow-hidden relative"
+        >
             {
                 projects.map((project) => (
-                    <div key={project.slug} id="galleryContainer" className={`w-full h-[600px] flex justify-center items-center absolute opacity-0 md:top-[9%] top-[4%] 2xl:top-[17%] select-none font-coiny`}>
-                        <span id="galleryTitleOutside" className="absolute -z-10 text-center flex justify-center items-center rounded-sm font-extrabold md:text-5xl 
-                        text-3xl top-14 md:top-16 py-4 px-2"
+                    <div
+                        key={project.slug}
+                        id="galleryContainer"
+                        className={`w-full h-[600px] flex justify-center items-center absolute opacity-0 md:top-[11%] top-[4%] 
+                        2xl:top-[17%] select-none font-bungee-shade`}
+                    >
+                        <span
+                            id="galleryTitleOutside"
+                            className="absolute -z-10 text-center flex justify-center items-center rounded-sm font-extrabold md:text-5xl 
+                            text-3xl top-14 md:top-16 py-4 px-2"
                         >
-                            <span className="text-[#CA4E79]">
+                            <span className="text-yellow-400">
                                 {project.title}
                             </span>
                         </span>
-                        <span id="galleryTitleOutsideDelay" className="absolute -z-10 text-center flex justify-center items-center rounded-sm font-extrabold md:text-5xl 
-                        text-3xl top-14 md:top-16 py-4 px-2"
+                        <span
+                            id="galleryTitleOutsideDelay"
+                            className="absolute -z-10 text-center flex justify-center items-center rounded-sm font-extrabold md:text-5xl 
+                            text-3xl top-14 md:top-16 py-4 px-2"
                         >
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F31559] via-[#FF52A2] to-[#FFB07F]">
                                 {project.title}
                             </span>
                         </span>
-                        <div onClick={() => goToProject(`/project/${project.slug}`)} id="gallery" className={`w-72 h-96 md:w-[500px] md:h-96 2xl:w-[600px] bg-red-300 relative overflow-hidden flex justify-center items-start rounded-xl`}>
-                            <Image id="galleryImage" fill src={project.coverImage} alt='image' className="object-cover md:object-cover" style={{ objectPosition: '50% 60%' }} />
-                            <span id="galleryTitleInside" className="w-[100vw] absolute z-10 text-center flex justify-center items-center rounded-sm font-extrabold md:text-5xl 
-                            text-3xl -top-[3.2rem] md:-top-[11.5%] py-4 px-2"
+                        <div
+                            onClick={() => goToProject(`/project/${project.slug}`)}
+                            id="gallery"
+                            className={`w-72 h-96 md:w-[500px] md:h-96 2xl:w-[600px] bg-red-300 relative overflow-hidden flex 
+                            justify-center items-start rounded-xl`}
+                        >
+                            <Image
+                                id="galleryImage"
+                                fill
+                                src={project.coverImage}
+                                alt='image'
+                                className="object-cover md:object-cover" style={{ objectPosition: '50% 60%' }}
+                            />
+                            <span
+                                id="galleryTitleInside"
+                                className="w-[100vw] absolute z-10 text-center flex justify-center items-center rounded-sm 
+                                font-extrabold md:text-5xl text-3xl -top-[3.2rem] md:-top-[11.5%] py-4 px-2"
                             >
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r to-[#F31559] via-[#FF52A2] from-[#FFB07F]">
+                                <span className="text-yellow-400">
                                     {project.title}
                                 </span>
                             </span>

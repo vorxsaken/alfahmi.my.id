@@ -88,6 +88,7 @@ export type Project = {
     content: string,
     landscape: string[],
     portrait: string[],
+    demo: string,
 }
 
 export type ProjectParams = {
@@ -100,13 +101,11 @@ export type ProjectHeadType ={
     author?: string,
     coverImage: string,
     excerpt: string,
+    demo: string 
 }
 
 export type ProjectBodyType = {
     content: string,
-    slug: string,
-    landscape: string[],
-    portrait: string[]
 }
 
 export type CardType = { 

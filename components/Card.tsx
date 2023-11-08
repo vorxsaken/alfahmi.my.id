@@ -11,7 +11,7 @@ function Card(props: CardType) {
     const tlCard = gsap.timeline({paused: true});
     const { color, className, id, cardId, imageId, title, desc, cover, slug } = props;
     const titleSub = title.length > 30 ? title.substring(0, 30) + ' ...' : title;
-    const description = desc.length > 100 ? desc.substring(0, 100) + ' ...' : desc;
+    const description = desc.length > 120 ? desc.substring(0, 120) + ' ...' : desc;
 
     const colors = {
         red: 'bg-red-200',

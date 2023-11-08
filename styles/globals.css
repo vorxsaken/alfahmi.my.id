@@ -16,6 +16,12 @@
         @apply bg-bright dark:bg-dark
     }
 
+    .text-grad-red-yellow {
+        @apply text-transparent bg-clip-text bg-gradient-to-r from-[#F31559] via-[#FF52A2] to-[#FFB07F]
+    }
+    .text-grad-red-purple {
+        @apply text-transparent bg-clip-text bg-gradient-to-r from-[#F31559] to-purple-500
+    }
     .text-stroke {
         color: transparent;
         text-shadow: none;

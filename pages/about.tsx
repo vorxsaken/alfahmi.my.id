@@ -26,22 +26,22 @@ function About() {
                             ))
                         }
                     </div>
-                    <div className="w-full h-full mt-[50%] md:mt-0 flex flex-col justify-start items-start gap-20 md:gap-6 z-50">
+                    <div className="w-full h-full mt-[50%] md:mt-0 flex flex-col justify-start items-start gap-36 md:gap-6 z-50">
                         <div className={`w-full h-[10%] hidden md:flex justify-end items-end text-[#4A4A4A] relative font-inria-serif`}>
                             <AnimateUpIn
                                 duration={1}
                                 delay={0.9}
-                                className="w-[300px] flex justify-start items-start gap-4 text-xs mr-0 md:mr-40 top-36 absolute opacity-0"
+                                className="w-[300px] md:w-[400px] flex justify-start items-start gap-4 text-xs md:text-[0.7rem] mr-0 md:mr-40 top-36 absolute opacity-0"
                             >
                                 <div className="w-2 h-2 rounded-full bg-[#4A4A4A] mt-2 opacity-60">
                                 </div>
                                 <p className="w-full">
-                                    i like anime stuff and game. for game, MOBA genre get my interest. especially mobile legends, always get me stressing and emotional
+                                    {`In my work as a frontend developer, I strive to make the web a better place one project at a time. While I've had the privilege of working on some exciting projects, I remain grounded in the knowledge that there's always more to discover and master in this ever-evolving field.`}
                                 </p>
                             </AnimateUpIn>
                         </div>
                         <div className={`w-full h-[10%] flex justify-start items-end text-[#4A4A4A] font-inria-serif`}>
-                            <div className="w-[400px] h-36 flex flex-col justify-start items-start gap-5 text-xs ml-0 md:ml-8">
+                            <div className="w-[400px] md:w-[500px] h-36 flex flex-col justify-start items-start gap-5 text-xs md:text-[0.7rem] ml-0 md:ml-8">
                                 <AnimateUpIn
                                     className="opacity-0"
                                     duration={0.5}
@@ -57,39 +57,39 @@ function About() {
                                     delay={0.9}
                                 >
                                     <p>
-                                        Hi i am fahmi, frontend developer from indonesia, undergraduated from one of university from sleman city indonesia, in programming world i love frontend things, like design, and doing javascript things, althougt frontend world is cover soooo many things i love to keep learning.
+                                        {`Hello! I'm a frontend developer who's passionate about creating engaging and user-friendly web experiences. My journey in web development began with a curious exploration of HTML and CSS, and I've been hooked ever since. While I don't have all the answers, I'm always eager to learn and improve, and I find great satisfaction in solving design and coding challenges. I believe in the power of collaboration and am grateful for the opportunity to work with talented designers and developers who continuously inspire me to grow.`}
                                     </p>
                                 </AnimateUpIn>
                             </div>
                         </div>
-                        <div className="w-full h-auto md:h-[50%] flex justify-end items-start">
+                        <div className="w-full flex justify-end items-start">
                             <div
-                                className="w-full md:w-[70%] h-full flex flex-col justify-start items-end relative text-5xl md:text-[11rem] font-extrabold text-[#808080]"
+                                className="w-full md:w-[80%] h-full flex flex-col justify-start items-end relative text-7xl md:text-[15rem] font-extrabold text-[#808080] font-coiny"
                                 style={{ lineHeight: 1 }}
                             >
                                 <AnimateWordUpIn
-                                    className="w-full h-14 md:h-40 flex justify-end items-start gap-4 overflow-hidden"
+                                    className="w-full h-20 md:h-64 flex justify-end items-start gap-2 overflow-hidden"
                                     delay={0.8}
                                     duration={0.5}
                                 >
                                     + I LOVE
                                 </AnimateWordUpIn>
                                 <AnimateWordUpIn
-                                    className="w-full h-14 md:h-40 flex justify-end items-start gap-4 overflow-hidden relative -right-4 text-[#373737]"
+                                    className="w-full h-20 md:h-64 flex justify-end items-start gap-4 overflow-hidden relative -right-4 text-[#373737]"
                                     delay={0.8}
                                     duration={0.5}
                                 >
                                     FRONT
                                 </AnimateWordUpIn>
                                 <AnimateWordUpIn
-                                    className="w-full h-14 md:h-40 flex justify-end items-start gap-4 overflow-hidden relative right-8 md:right-20 text-[#373737]"
+                                    className="w-full h-20 md:h-64 flex justify-end items-start gap-4 overflow-hidden relative right-8 md:right-20 text-[#373737]"
                                     delay={0.8}
                                     duration={0.5}
                                 >
                                     END ---
                                 </AnimateWordUpIn>
                                 <AnimateWordUpIn
-                                    className="w-full h-14 md:h-40 flex justify-end items-start gap-4 overflow-hidden"
+                                className="w-full h-20 md:h-64 flex justify-end items-start gap-4 overflow-hidden"
                                     delay={0.8}
                                     duration={0.5}
                                 >
@@ -101,12 +101,25 @@ function About() {
                             <AnimateUpIn
                                 duration={1}
                                 delay={0.9}
-                                className="w-full md:w-[400px] flex justify-start items-start gap-4 text-xs ml-0 md:ml-64 opacity-0"
+                                className="w-full md:w-[500px] flex justify-start items-start gap-4 text-xs md:text-[0.7rem] ml-0 md:ml-64 opacity-0"
                             >
                                 <div className="w-2 h-2 rounded-full bg-[#4A4A4A] mt-2 opacity-60">
                                 </div>
                                 <p className="w-full">
-                                    at first, i really confused how do i start programming, but as time goes on, programming become easier, but i still have so many things to learn
+                                    {`I enjoy the camaraderie of the development community and love sharing knowledge and experiences with others. As a frontend developer, I'm on a perpetual quest for improvement, and I'm genuinely excited about what the future holds in this dynamic and rewarding field.`}
+                                </p>
+                            </AnimateUpIn>
+                        </div>
+                        <div className={`w-full h-[10%] md:hidden flex justify-end items-end text-[#4A4A4A] relative font-inria-serif`}>
+                            <AnimateUpIn
+                                duration={1}
+                                delay={0.9}
+                                className="w-[300px] md:w-[400px] flex justify-start items-start gap-4 text-xs opacity-0 relative -top-36 -left-3"
+                            >
+                                <div className="w-2 h-2 rounded-full bg-[#4A4A4A] mt-2 opacity-60">
+                                </div>
+                                <p className="w-full">
+                                    {`In my work as a frontend developer, I strive to make the web a better place one project at a time. While I've had the privilege of working on some exciting projects, I remain grounded in the knowledge that there's always more to discover and master in this ever-evolving field.`}
                                 </p>
                             </AnimateUpIn>
                         </div>
