@@ -7,7 +7,7 @@ function AnimateWordUpIn({ children, duration, delay, className }: AnimateWordUp
     var count = -1;
 
     const animationElement = (
-        <div className="flex gap-4">
+        <div className="flex gap-2">
             {
                 TwoDimension?.map((oneD, oneIndex) => (
                     <div key={oneIndex} className="flex justify-start items-start">

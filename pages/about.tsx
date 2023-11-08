@@ -68,7 +68,7 @@ function About() {
                                 style={{ lineHeight: 1 }}
                             >
                                 <AnimateWordUpIn
-                                    className="w-full h-20 md:h-64 flex justify-end items-start gap-2 overflow-hidden"
+                                    className="w-full h-20 md:h-64 flex justify-end items-start overflow-hidden"
                                     delay={0.8}
                                     duration={0.5}
                                 >
